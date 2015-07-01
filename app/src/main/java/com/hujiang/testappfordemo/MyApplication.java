@@ -30,7 +30,7 @@ public class MyApplication extends Application {
 
         mProcessName = getCurrentProcessName(this);
         Log.i(TAG, "onCreate" + "getProcessName：" + mProcessName);
-        Log.i(TAG, "init_akk_process");
+        Log.i(TAG, "init_all_process");
         if(TextUtils.equals(mProcessName, getPackageName())){
             Log.i(TAG, "init_main_process");
          } else if(TextUtils.equals(getProcessName(this, android.os.Process.myPid()), "com.hujiang.test.servicea")){
