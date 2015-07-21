@@ -27,7 +27,6 @@ public class MyApplication extends Application {
         super.onCreate();
         Log.i(TAG, "onCreate" + "pid" + android.os.Process.myPid());
 
-
         mProcessName = getCurrentProcessName(this);
         Log.i(TAG, "onCreate" + "getProcessName：" + mProcessName);
         Log.i(TAG, "init_all_process");
@@ -38,6 +37,7 @@ public class MyApplication extends Application {
          }else if(TextUtils.equals(getProcessName(this, android.os.Process.myPid()), "com.hujiang.test.servicec")){
             Log.i(TAG, "init_c_process");
          }
+//        startService();
     }
 
     public void startService(){

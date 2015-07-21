@@ -18,14 +18,15 @@ public class ServiceB extends Service {
     public static final String TAG = ServiceB.class.getSimpleName();
     @Override
     public void onCreate() {
-        super.onCreate();
+//        super.onCreate();
         Log.i(TAG,"onCreate" + "pid：" + android.os.Process.myPid());
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.i(TAG,"onStartCommand" + "pid：" + android.os.Process.myPid());
-        return super.onStartCommand(intent, flags, startId);
+//        return super.onStartCommand(intent, flags, startId);
+        return START_NOT_STICKY;
     }
 
     @Nullable
